@@ -30,6 +30,10 @@
   src: url('/fonts/Chilanka-Regular.woff') format('woff');
   }
 
+.background {
+  background-image: url('../src/assets/spring-tree-planting-scaled.jpg');
+}
+
 
 /* body {
   margin: 0;

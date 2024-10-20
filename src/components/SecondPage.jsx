@@ -16,10 +16,10 @@ const SecondPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="h-24 mt-16 flex flex-row justify-center items-center border border-red-500">
-            <div className='w-5/12 border border-customTertiaryGreen'></div>
+            <div className="h-24 mt-16 flex flex-row justify-center items-center">
+            <div className='w-1/3 border border-customTertiaryGreen'></div>
             <div className='text-5xl font-chilankaRegular text-customTertiaryGreen px-2'>What We Do</div>
-            <div className='w-5/12 border border-customTertiaryGreen'></div>
+            <div className='w-1/3 border border-customTertiaryGreen'></div>
             </div>
         </section>
     )
