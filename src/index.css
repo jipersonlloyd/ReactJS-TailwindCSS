@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Californian FB';
+  src: url('/fonts/californian-fb.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Calibri Regular';
+  src: url('/fonts/calibri-regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Calibri Bold';
+  src: url('/fonts/calibri-bold.ttf') format('ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chilanka Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/Chilanka-Regular.woff') format('woff');
+  }
+
+
+/* body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  border: 2px solid red
+} */
+
+
