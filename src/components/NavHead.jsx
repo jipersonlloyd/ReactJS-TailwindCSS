@@ -26,6 +26,26 @@ const NavHead = () => {
         };
     }, [lastScrollY]);
 
+    const downloadTextFile = () => {
+        // The content of the file
+        const textContent = "UPDATE inv_daily_summary\nSET fcompanyid = 'xSTRIK5-12020182'\nWHERE fcompanyid = ''\nAND fsiteid = ''\nAND ftrxdate = ''\nAND fproductid = ''\nAND flotno = '-'\n\nUPDATE inv_ledger_distribution\nSET fcompanyid = 'xSTRIK5-12020182'\nWHERE fcompanyid = ''\nAND fsiteid = ''\nAND finv_date = ''\nAND fproductid = ''\nAND fdistid = ''\n";
+    
+        // Create a Blob from the text content
+        const blob = new Blob([textContent], { type: 'text/plain' });
+    
+        // Create an object URL for the Blob
+        const url = URL.createObjectURL(blob);
+    
+        // Create an anchor element and trigger the download
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'example.txt'; // Set the file name
+        link.click();
+    
+        // Clean up the URL object
+        URL.revokeObjectURL(url);
+      };
+
     return (
         <div>
             <nav className={`bg-customSecondaryCyprus p-4 fixed top-0 left-0 w-full shadow-lg transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
@@ -126,7 +146,7 @@ const NavHead = () => {
                         </ul>
                     </div>
                     <div>
-                        <button
+                        <button onClick={downloadTextFile}
                             className="bg-customTertiaryGreen border border-transparent font-bold text-white px-4 py-2 rounded-xl transition-all duration-300 hover:bg-white hover:border-customTertiaryGreen hover:text-customTertiaryGreen">Get Started
                         </button>
                     </div>
